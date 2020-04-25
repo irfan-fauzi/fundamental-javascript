@@ -57,7 +57,7 @@ for (let a = 1; a <= 10; a++) {
         document.write(`*`);
     }
     for (let c = 1; c <= a; c++) {
-        document.write(c);
+        document.write(`${c}`);
     }
     for (let d = 1; d <= a - 1; d++) {
         document.write(d);
@@ -67,18 +67,17 @@ for (let a = 1; a <= 10; a++) {
     }
     document.write(`<br>`);
 }
-// 2
-for (let a = 1; a <= 10; a++) {
-    for (let b = a; b <= 10; b++) {
+for (a = 1; a <= 10; a++) {
+    for (b = 1; b <= a; b++) {
         document.write(`*`);
     }
-    for (let c = 1; c <= a; c++) {
+    for (c = a; c <= 10; c++) {
         document.write(c);
     }
-    for (let d = 1; d <= a - 1; d++) {
+    for (d = a; d <= 10 - 1; d++) {
         document.write(d);
     }
-    for (let e = a; e <= 10; e++) {
+    for (e = 1; e <= a; e++) {
         document.write(`*`);
     }
     document.write(`<br>`);
