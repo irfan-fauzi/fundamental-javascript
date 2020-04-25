@@ -67,3 +67,19 @@ for (let a = 1; a <= 10; a++) {
     }
     document.write(`<br>`);
 }
+// 2
+for (let a = 1; a <= 10; a++) {
+    for (let b = a; b <= 10; b++) {
+        document.write(`*`);
+    }
+    for (let c = 1; c <= a; c++) {
+        document.write(c);
+    }
+    for (let d = 1; d <= a - 1; d++) {
+        document.write(d);
+    }
+    for (let e = a; e <= 10; e++) {
+        document.write(`*`);
+    }
+    document.write(`<br>`);
+}
