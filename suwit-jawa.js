@@ -2,59 +2,44 @@
 let player = prompt(`pilih : gajah, orang, semut`);
 
 
-// menangkap pilihan komputer
-// genereate bilangan random 
-// Matn() => membangkitkan  bilangan random dari 0 - 1
+let comp = Math.random();
 
 
-// rules
-
-// show result
-
-let computer = Math.random();
-
-let pilihanComputer = function (param) {
-
-    let semut = param <= 0.34;
-    let orang = param >= 0.34 && param < 0.67;
-
-    if (semut) {
-        return param = `semut`;
-    } else if (orang) {
-        return param = `orang`;
-    } else {
-        return param = `gajah`;
-    }
-
+if (comp <= 0.34) {
+    comp = `semut`;
+} else if (comp >= 0.34 && comp < 0.67) {
+    comp = `orang`;
+} else {
+    comp = `gajah`;
 }
 
-let tarung = function (pilihanComputer, player) {
-    let hasil = alert();
-    if (pilihanComputer == player) {
-        return hasil = `seri`;
-        // jika playr = gajah
-    } else if (player == 'gajah') {
-        if (pilihanComputer == 'orang') {
-            return hasil = `komputer = ${pilihanComputer} player win`;
-        } else {
-            return hasil = `komputer = ${pilihanComputer} player lose `;
-        }
-    } else if (player == `orang`) {
-        if (pilihanComputer == 'gajah') {
-            return hasil = `komputer = ${pilihanComputer} player lose`;
-        } else {
-            return hasil = `komputer = ${pilihanComputer} player win `;
-        }
-    } else if (player == `semut`) {
-        if (pilihanComputer == 'orang') {
-            return hasil = `komputer = ${pilihanComputer} player lose`;
-        } else {
-            return hasil = `komputer = ${pilihanComputer} player win `;
-        }
 
+
+let hasil = ``;
+if (comp == player) {
+    hasil = `seri`;
+    // jika playr = gajah
+} else if (player == 'gajah') {
+    if (comp == 'orang') {
+        hasil = `menang`;
     } else {
-        return hasil = `eror`;
+        hasil = `kalah`;
     }
+} else if (player == `orang`) {
+    if (comp == 'gajah') {
+        hasil = `you lose`;
+    } else {
+        hasil = `player lose `;
+    }
+} else if (player == `semut`) {
+    if (comp == 'orang') {
+        hasil = `you lose`;
+    } else {
+        hasil = `you win `;
+    }
+
+} else {
+    hasil = `eror`;
 }
 
-tarung(pilihanComputer(), player);
+alert(`kami memilih : ${player}, dan komputer memilih ${comp} \nHasilnya kamu : ${hasil}`);
