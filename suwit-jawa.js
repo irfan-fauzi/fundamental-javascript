@@ -48,3 +48,4 @@ while (tanya) {
     alert(`kamu memilih : ${player}, dan komputer memilih ${comp} \nHasilnya kamu : ${hasil}`);
     tanya = confirm(`lakukan lagi ?`);
 }
+alert(`terimakasih`);
