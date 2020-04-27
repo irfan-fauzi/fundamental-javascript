@@ -82,3 +82,25 @@ for (a = 1; a <= 10; a++) {
     }
     document.write(`<br>`);
 }
+document.write(`<br>`);
+
+// papan catur
+for (let i = 1; i <= 5; i++) {
+    for (let b = 1; b <= 20; b++) {
+        if (b % 2 == 0) {
+            document.write(`*`);
+        } else {
+            document.write(`#`);
+        }
+    }
+    document.write(`<br>`);
+    for (let b = 1; b <= 20; b++) {
+        if (b % 2 == 1) {
+            document.write(`*`);
+        } else {
+            document.write(`#`);
+        }
+    }
+    document.write(`<br>`);
+
+}
