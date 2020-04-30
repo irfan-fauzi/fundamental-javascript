@@ -150,7 +150,7 @@ for (let a = 1; a <= vertikal; a++) { // buat vertikal
         if (a % 2 == 1) {
 
             if (b % 2 == 0) {
-                document.write(`${pagar}`);
+                document.write(pagar);
             } else {
                 document.write(bintang);
             }
