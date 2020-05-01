@@ -122,28 +122,6 @@ let bintang = "*";
 let vertikal = 15;
 let horizontal = 10;
 
-// for (let a = 1; a <= nomor; a++) { // buat vertikal
-//     for (let b = 1; b <= nomor; b++) { // horizontal
-//         // jika ganjil
-//         if (a % 2 == 1) {
-
-//             if (b % 2 == 0) {
-//                 hasil += pagar;
-//             } else {
-//                 hasil += bintang;
-//             }
-//         } else {
-//             if (b % 2 == 0) {
-//                 hasil += bintang;
-//             } else {
-//                 hasil += pagar;
-//             }
-//         }
-//     }
-//     hasil = hasil + `\n`;
-//     console.log(hasil)
-//     hasil = ``;
-
 for (let a = 1; a <= vertikal; a++) { // buat vertikal
     for (let b = 1; b <= horizontal; b++) { // horizontal
         // jika ganjil
