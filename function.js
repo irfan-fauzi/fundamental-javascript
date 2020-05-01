@@ -76,3 +76,5 @@ let segitigaAngka = function (jmlAngka) {
     }
     return stringKosong;
 }
+
+// membuat game suwit dengan function
