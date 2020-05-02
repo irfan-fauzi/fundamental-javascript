@@ -5,10 +5,7 @@
 
 
 let comp = Math.random();
-// --------------------------- / INPUT ----------------------------
 
-// --------------------------- PROSES ---------------------------
-// memproses pilihan komputer menghasilkan output
 let pilihanComputer = function (comp) {
     let hasil = ``;
     if (comp <= 0.34) {
@@ -28,21 +25,21 @@ let pilihanPlayer = function (player, kom) {
         hasil = `seri`;
     } else if (player == `gajah`) {
         if (kom == `orang`) {
-            hasil = `player menang komputer memilih ${kom}`;
+            hasil = `player MENANG komputer memilih ${kom}`;
         } else {
-            hasil = `player kalah komputer memilih ${kom}`;
+            hasil = `player KALAH komputer memilih ${kom}`;
         }
     } else if (player == `orang`) {
         if (kom == `gajah`) {
-            hasil = `player kalah komputer memilih ${kom}`
+            hasil = `player KALAH komputer memilih ${kom}`
         } else {
-            hasil = `player menang komputer memilih ${kom}`;
+            hasil = `player MENANG komputer memilih ${kom}`;
         }
     } else if (player == `semut`) {
         if (kom == `gajah`) {
-            hasil = `player menang komputer memilih ${kom}`;
+            hasil = `player MENANG komputer memilih ${kom}`;
         } else {
-            hasil = `player kalah komputer memilih ${kom}`;
+            hasil = `player KALAH komputer memilih ${kom}`;
         }
     } else { // jika player input karakter selain 3
         hasil = `salah input`;
@@ -51,5 +48,11 @@ let pilihanPlayer = function (player, kom) {
 }
 // -------------------- / PROSES ---------------------------
 
-// --------------------  OUTPUT -----------------------
-// fungsi pilihanComputer masukan ke variabel
+
+for (let a = true; a; a = confirm(`lakukan lagi`)) {
+    let player = prompt('isi');
+    let pilKom = pilihanComputer(comp);
+    let pilPlay = pilihanPlayer(player, pilKom);
+    pilPlay;
+
+}
