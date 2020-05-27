@@ -1,9 +1,9 @@
-let button = document.querySelector('button');
-let hasil = document.querySelector('.hasil');
+let button = document.querySelector('.tambah');
+let btnHapus = document.querySelector('.hapus');
 
 
 button.innerHTML = "tambah penumpang";
-let angkot1 = ['satu', undefined, 'dua'];
+let angkot1 = [];
 
 // tambah data
 let tambahPenumpang = function (penumpang, array) {
@@ -26,9 +26,29 @@ let tambahPenumpang = function (penumpang, array) {
     }
 
 }
+let hapusPenumpang = function (penumpang, array) {
+    // jika array kosong
+    if (array.length == 0) {
+        alert('angkot kosong');
+        return array;
+    } else {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == penumpang) {
+                array[i] = undefined;
+                alert(`${penumpang} sudah dihapus`);
+                return array;
+            } else if (i == array.length - 1) {
+                alert('nama tsb tidak ada');
+                return array;
+            }
+        }
+    }
+}
 
-
-
+let num = [1, 2, 3, 4, 5];
+for (let i = 0; i < num.length; i++) {
+    console.log(i);
+}
 
 
 
@@ -36,3 +56,6 @@ button.addEventListener('click', function () {
     tambahPenumpang(prompt('masukan nama'), angkot1);
 
 });
+btnHapus.addEventListener('click', function () {
+    hapusPenumpang(prompt('masukan nama yang akan di hapus'), angkot1);
+})
