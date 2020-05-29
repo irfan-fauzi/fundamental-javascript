@@ -23,21 +23,15 @@ const Angkot = function (sopir, trayek) {
         return this.penumpang;
     }
     this.penumpangTurun = function (penumpang) {
-        if (this.penumpang.length == 0) {
-            alert("penumpang kosong");
-            return this.penumpang;
-        }
-        for (let i = 0; i < this.penumpang.length; i++) {
-            if (this.penumpang[i] == penumpang) {
-                this.penumpang[i] = undefined;
-                this.kas += 100;
-                return this.penumpang;
-            } else if (i == this.penumpang.length - 1) {
-                alert("nama penumpang tidak ada");
-                return this.penumpang;
+        this.penumpang.forEach(function (el, index, object) {
+            if (el === penumpang) {
+                object.splice(index, 1);
             }
-        }
+        });
+        return this.penumpang;
     }
+
+
 }
 let angkot1 = new Angkot(`udin`, `majalengka - kadipaten`);
 let angkot2 = new Angkot(`supardi`, `majalengka - kadipaten`);
