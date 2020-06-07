@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: salmon 1px solid;
+    margin: 50px auto;
+    /* tambah animasi : optional */
+    /*transition: .3s width,
+        .3s height .3s,
+        .3s margin-top .3s,
+        .3s backgroud-color .3s;*/
+}
+
+.zoom {
+    width: 150px;
+    height: 150px;
+}
+
+.addColor {
+    background-color: salmon;
+}
