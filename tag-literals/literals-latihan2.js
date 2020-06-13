@@ -1,3 +1,12 @@
+/*
+    author : irfan fauzi
+    date : 09 juni 2020
+    masssage : - pembuatan elemen dengan pengulangan 
+               - pembuatan atribut class dengan pengulangan
+
+
+*/
+
 let arr = [];
 const angka = function (index) {
   for (let i = 1; i <= index; i++) {
@@ -7,7 +16,8 @@ const angka = function (index) {
 // isi jumlah array with run function:
 angka(6);
 // create elemen with looping :
-const el = `${arr.map( el => 
+const el = `${arr.map( el =>
+                
               `<div class="box${el}">kotak${el}</div>`  
             
             ).join(``)}`;
